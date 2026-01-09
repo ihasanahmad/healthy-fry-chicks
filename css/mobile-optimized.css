@@ -148,6 +148,25 @@
         font-size: 12px !important;
         margin-bottom: 8px !important;
         line-height: 1.4 !important;
+        min-height: 3em !important;
+        /* Maintain alignment on mobile */
+    }
+
+    /* Ensure product cards maintain flexbox alignment on mobile */
+    .product-card {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+    }
+
+    .product-card .card-body {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 !important;
+    }
+
+    .product-card .card-body .flex.items-center.justify-between {
+        margin-top: auto !important;
     }
 
     .product-price {
