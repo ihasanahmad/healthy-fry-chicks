@@ -26,6 +26,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cart-modal.css">
 </head>
 
 <body>
@@ -43,8 +44,10 @@
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li>
-                    <a href="#" class="btn btn-primary btn-sm" onclick="showOrderModal()">
-                        <i class="fas fa-shopping-cart"></i> Order Now
+                    <a href="#" class="btn btn-primary btn-sm" onclick="event.preventDefault(); openCartModal()"
+                        style="position: relative;">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span class="cart-badge cart-count">0</span>
                     </a>
                 </li>
             </ul>
@@ -454,6 +457,35 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-backdrop" id="cartBackdrop" onclick="closeCartModal()"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button class="cart-close" onclick="closeCartModal()" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-body" id="cartBody">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <p style="font-size: var(--font-size-sm);">Add some delicious items!</p>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span class="cart-total-label">Total:</span>
+                <span class="cart-total-amount" id="cartTotal">Rs. 0</span>
+            </div>
+            <button class="btn btn-success cart-checkout-btn" onclick="showOrderModal()">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+            </button>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>

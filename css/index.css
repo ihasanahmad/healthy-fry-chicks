@@ -347,6 +347,18 @@ p {
     object-fit: cover;
 }
 
+@media (max-width: 768px) {
+    .card-img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-img {
+        height: 140px;
+    }
+}
+
 .card-body {
     padding: var(--space-4);
 }
