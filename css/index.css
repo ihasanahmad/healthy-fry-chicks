@@ -378,6 +378,20 @@ p {
 .product-card {
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--space-4);
+}
+
+.product-card .card-body .flex.items-center.justify-between {
+    margin-top: auto;
 }
 
 .product-badge {
@@ -392,6 +406,8 @@ p {
     border-radius: var(--radius-md);
     text-transform: uppercase;
     z-index: 10;
+    margin: 0 !important;
+    /* Prevent any margin override */
 }
 
 .product-price {
