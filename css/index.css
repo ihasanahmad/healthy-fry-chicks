@@ -400,6 +400,15 @@ p {
     align-items: center !important;
 }
 
+/* Ensure price container has consistent height whether it has sale price or not */
+.product-card .card-body .flex.items-center.justify-between>div:first-child {
+    min-height: 36px;
+    /* Accounts for tallest price format (main + old price) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .product-badge {
     position: absolute;
     top: var(--space-2);
