@@ -397,7 +397,8 @@ p {
     margin-top: auto;
     min-height: 44px;
     /* Fixed height for perfect button baseline alignment */
-    align-items: center !important;
+    align-items: flex-end !important;
+    /* Pin buttons to same baseline */
 }
 
 /* Ensure price container has consistent height whether it has sale price or not */
@@ -406,7 +407,8 @@ p {
     /* Accounts for tallest price format (main + old price) */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    /* Align prices to bottom too */
 }
 
 .product-badge {
