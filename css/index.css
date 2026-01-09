@@ -372,6 +372,9 @@ p {
 .card-text {
     color: var(--color-text-secondary);
     margin-bottom: var(--space-3);
+    min-height: 3em;
+    /* Ensure 2-3 lines minimum to align cards */
+    line-height: 1.5;
 }
 
 /* Product Card Specific */
