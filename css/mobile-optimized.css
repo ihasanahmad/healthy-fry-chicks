@@ -1,0 +1,251 @@
+/* Mobile - Professional Food App Design */
+@media (max-width: 480px) {
+    :root {
+        --font-size-6xl: 1.875rem;
+        /* 30px */
+        --font-size-5xl: 1.5rem;
+        /* 24px */
+        --font-size-4xl: 1.375rem;
+        /* 22px */
+        --font-size-3xl: 1.25rem;
+        /* 20px */
+        --font-size-2xl: 1.125rem;
+        /* 18px */
+        --font-size-xl: 1rem;
+        /* 16px */
+        --font-size-base: 0.875rem;
+        /* 14px */
+        --font-size-sm: 0.8125rem;
+        /* 13px */
+    }
+
+    .container {
+        padding: 0 var(--space-3);
+    }
+
+    .section {
+        padding: var(--space-4) 0;
+    }
+
+    .section-lg {
+        padding: var(--space-6) 0;
+    }
+
+    .grid-cols-2,
+    .grid-cols-3,
+    .grid-cols-4 {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    /* Hero Section - Compact */
+    .hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-4xl);
+        margin-bottom: var(--space-2);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--space-4);
+    }
+
+    .hero-cta {
+        flex-direction: row;
+        gap: var(--space-2);
+        flex-wrap: nowrap;
+    }
+
+    .hero-cta .btn {
+        flex: 1;
+        min-width: auto;
+        max-width: none;
+        padding: var(--space-2) var(--space-3);
+        font-size: var(--font-size-sm);
+    }
+
+    /* Card Optimizations */
+    .card {
+        border-radius: var(--radius-lg);
+    }
+
+    .card-img {
+        height: 120px;
+    }
+
+    .card-body {
+        padding: var(--space-3);
+    }
+
+    .card-title {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--space-1);
+    }
+
+    .card-text {
+        font-size: var(--font-size-xs);
+        margin-bottom: var(--space-2);
+        line-height: 1.4;
+    }
+
+    /* Product Cards - Compact */
+    .product-price {
+        font-size: var(--font-size-lg);
+    }
+
+    .product-price-old {
+        font-size: var(--font-size-sm);
+    }
+
+    .product-badge {
+        padding: 2px 6px;
+        font-size: 9px;
+        top: var(--space-1);
+        right: var(--space-1);
+    }
+
+    /* Buttons - Smaller and Cleaner */
+    .btn {
+        padding: 8px 16px;
+        font-size: var(--font-size-sm);
+        border-radius: var(--radius-md);
+    }
+
+    .btn-lg {
+        padding: 10px 20px;
+        font-size: var(--font-size-base);
+    }
+
+    .btn-sm {
+        padding: 6px 12px;
+        font-size: var(--font-size-xs);
+    }
+
+    /* Product Card Button */
+    .product-card .btn-sm {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    /* Category Tabs - Horizontal Scroll */
+    .flex.justify-center[style*="flex-wrap"] {
+        justify-content: flex-start !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin: 0 calc(var(--space-3) * -1);
+        padding: 0 var(--space-3) var(--space-2);
+    }
+
+    .flex.justify-center[style*="flex-wrap"]::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category-tab {
+        flex-shrink: 0;
+        white-space: nowrap;
+        padding: 8px 16px !important;
+        font-size: 13px !important;
+        min-width: auto;
+    }
+
+    /* Typography Adjustments */
+    h2 {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--space-3);
+    }
+
+    h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    h4 {
+        font-size: var(--font-size-base);
+    }
+
+    p {
+        margin-bottom: var(--space-2);
+    }
+
+    /* Section Spacing */
+    .mb-8 {
+        margin-bottom: var(--space-4);
+    }
+
+    .mb-6 {
+        margin-bottom: var(--space-3);
+    }
+
+    .mb-4 {
+        margin-bottom: var(--space-2);
+    }
+
+    .mt-8 {
+        margin-top: var(--space-4);
+    }
+
+    .mt-6 {
+        margin-top: var(--space-3);
+    }
+
+    .mt-4 {
+        margin-top: var(--space-2);
+    }
+
+    /* Form Elements - Compact */
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: 10px 12px;
+        font-size: var(--font-size-sm);
+    }
+
+    .form-textarea {
+        min-height: 80px;
+    }
+
+    .form-group {
+        margin-bottom: var(--space-3);
+    }
+
+    .form-label {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--space-1);
+    }
+
+    /* Footer Adjustments */
+    .footer {
+        padding: var(--space-6) 0 var(--space-4);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .footer-bottom {
+        font-size: var(--font-size-xs);
+    }
+
+    /* Floating Action Buttons - Smaller */
+    div[style*="position: fixed"][style*="bottom: 30px"] {
+        bottom: 20px !important;
+        right: 15px !important;
+        gap: 8px !important;
+    }
+
+    div[style*="position: fixed"][style*="bottom: 30px"] .btn {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    div[style*="position: fixed"][style*="bottom: 30px"] i {
+        font-size: 22px !important;
+    }
+}
