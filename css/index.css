@@ -395,6 +395,9 @@ p {
 
 .product-card .card-body .flex.items-center.justify-between {
     margin-top: auto;
+    min-height: 44px;
+    /* Fixed height for perfect button baseline alignment */
+    align-items: center !important;
 }
 
 .product-badge {

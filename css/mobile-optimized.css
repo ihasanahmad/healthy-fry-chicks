@@ -167,6 +167,9 @@
 
     .product-card .card-body .flex.items-center.justify-between {
         margin-top: auto !important;
+        min-height: 40px !important;
+        /* Fixed height for perfect button baseline alignment on mobile */
+        align-items: center !important;
     }
 
     .product-price {
