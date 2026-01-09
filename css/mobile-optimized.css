@@ -163,6 +163,22 @@
         font-size: 9px !important;
     }
 
+    /* Product Card Alignment - Ensure prices and buttons align */
+    .product-card {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .product-card .card-body {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 !important;
+    }
+
+    .product-card .card-body .flex.items-center.justify-between {
+        margin-top: auto !important;
+    }
+
     /* Typography */
     h2 {
         font-size: 20px !important;
