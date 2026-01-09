@@ -169,7 +169,14 @@
         margin-top: auto !important;
         min-height: 40px !important;
         /* Fixed height for perfect button baseline alignment on mobile */
-        align-items: center !important;
+        align-items: flex-end !important;
+    }
+
+    /* Align prices to bottom to match button baseline */
+    .price-container {
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: flex-end !important;
     }
 
     .product-price {
