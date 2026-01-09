@@ -988,3 +988,23 @@ p {
 .shadow-xl {
     box-shadow: var(--shadow-xl);
 }
+
+/* ========== DESKTOP-SPECIFIC LAYOUTS ========== */
+/* Desktop only (min-width: 769px) - reverse Quick Order Form and Location */
+@media (min-width: 769px) {
+
+    /* Target the "Visit Us or Order Online" section grid */
+    .section[style*="background: var(--color-bg-secondary)"] .grid.grid-cols-2 {
+        display: grid;
+    }
+
+    /* Quick Order Form - move to right column (position 2) */
+    .section[style*="background: var(--color-bg-secondary)"] .grid.grid-cols-2>.animate-slide-in-right {
+        order: 2;
+    }
+
+    /* Location - move to left column (position 1) */
+    .section[style*="background: var(--color-bg-secondary)"] .grid.grid-cols-2>.animate-slide-in-left {
+        order: 1;
+    }
+}
