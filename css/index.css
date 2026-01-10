@@ -520,6 +520,12 @@ p {
     transition: all var(--transition-base);
 }
 
+/* Mobile cart button - hidden on desktop */
+.mobile-cart-btn {
+    display: none;
+}
+
+
 /* ========== HERO SECTION ========== */
 .hero {
     position: relative;

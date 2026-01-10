@@ -326,4 +326,44 @@
     .section .grid.grid-cols-3 .text-center div[style*="width: 80px"] i {
         font-size: 22px !important;
     }
+
+    /* Mobile Cart Button in Header */
+    .mobile-cart-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: var(--gradient-primary);
+        color: white;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: var(--shadow-md);
+        transition: all var(--transition-base);
+    }
+
+    .mobile-cart-btn:active {
+        transform: scale(0.95);
+    }
+
+    .mobile-cart-btn i {
+        font-size: 18px;
+    }
+
+    .mobile-cart-btn .cart-badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background: var(--color-secondary);
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        min-width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 4px;
+    }
 }
