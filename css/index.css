@@ -434,10 +434,11 @@ p {
 }
 
 .product-price-old {
-    font-size: var(--font-size-lg);
-    color: var(--color-text-tertiary);
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
     text-decoration: line-through;
     margin-left: var(--space-2);
+    opacity: 0.85;
 }
 
 /* ========== HEADER / NAVIGATION ========== */
