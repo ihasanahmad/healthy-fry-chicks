@@ -332,20 +332,45 @@
         font-size: 22px !important;
     }
 
-    /* Mobile Cart Button in Header */
+    /* Header Layout - Push Logo Left, Group Cart & Menu Right */
+    .header .logo {
+        margin-right: auto !important;
+    }
+
+    /* Ensure proper ordering: Logo -> Menu -> Cart (Most Right) */
+    .mobile-menu-toggle {
+        display: flex !important;
+        /* Ensure it's flex */
+        order: 1;
+        margin-right: 12px !important;
+        /* Gap between menu and cart */
+        padding: 0 !important;
+        /* Reset padding for cleaner alignment */
+        border: none;
+        background: transparent;
+    }
+
+    /* Mobile Cart Button */
     .mobile-cart-btn {
         display: flex !important;
+        order: 2;
+        /* Move to far right */
         align-items: center;
         justify-content: center;
-        width: 44px;
-        height: 44px;
+        width: 38px;
+        /* Reduced from 44px */
+        height: 38px;
+        /* Reduced from 44px */
         background: var(--gradient-primary);
+        /* Keep gradient or make transparent? User said "why so big", size + visual weight. reducing size first */
         color: white;
         border-radius: 50%;
         position: relative;
-        box-shadow: var(--shadow-md);
+        box-shadow: var(--shadow-sm);
+        /* Reduced shadow */
         transition: all var(--transition-base);
-        margin-right: 12px !important;
+        margin-right: 0 !important;
+        /* Reset margin */
     }
 
     .mobile-cart-btn:active {
@@ -353,23 +378,53 @@
     }
 
     .mobile-cart-btn i {
-        font-size: 18px;
+        font-size: 16px;
+        /* Reduced from 18px */
     }
 
     .mobile-cart-btn .cart-badge {
         position: absolute;
-        top: -4px;
-        right: -4px;
+        top: -2px;
+        right: -2px;
         background: var(--color-secondary);
         color: white;
-        font-size: 11px;
+        font-size: 10px;
+        /* Reduced size */
         font-weight: bold;
-        min-width: 20px;
-        height: 20px;
-        border-radius: 10px;
+        min-width: 16px;
+        height: 16px;
+        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 4px;
+        padding: 0 3px;
+        border: 2px solid white;
+        /* Add border to make it pop distinct from button */
     }
+}
+
+.mobile-cart-btn:active {
+    transform: scale(0.95);
+}
+
+.mobile-cart-btn i {
+    font-size: 18px;
+}
+
+.mobile-cart-btn .cart-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: var(--color-secondary);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+}
 }
