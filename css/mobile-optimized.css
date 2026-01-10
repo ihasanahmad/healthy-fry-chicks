@@ -14,6 +14,11 @@
         --font-size-sm: 0.8125rem !important;
     }
 
+    /* Header Layout - Push Logo Left, Group Cart & Menu Right */
+    .header .logo {
+        margin-right: auto !important;
+    }
+
     /* Container and Layout */
     .container {
         padding: 0 var(--space-3) !important;
@@ -340,6 +345,7 @@
         position: relative;
         box-shadow: var(--shadow-md);
         transition: all var(--transition-base);
+        margin-right: 12px !important;
     }
 
     .mobile-cart-btn:active {
